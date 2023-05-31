@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面跳转测试</title>
+    <style>
+        body{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+不能看到啵啵小狗341捏
+<script>
+    function isLoggedIn(){
+        return false;
+    }
+
+    function beforeLoad(){
+        if(!isLoggedIn()) {
+            window.location.href = '111.html';
+        }else{
+            document.body.style.display = "block";
+        }
+    }
+    window.addEventListener('DOMContentLoaded',beforeLoad());
+</script>
+</body>
+</html>

@@ -14,11 +14,11 @@ export default defineConfig({
 	},
 	server: {
 		proxy: {
-			'/hldp': {
-				target: 'http://localhost:8080',
-				changeOrigin: true,
-				rewrite: (path) => path.replace(/^\/hldp/, ''),
-			},
-		},
-	},
+		  '/api': {
+			target: 'http://127.0.0.1:8080',
+			rewrite: (path) => path.replace(/^\/api/, ''),
+			changeOrigin: true,
+		  },
+		}
+	}
 });

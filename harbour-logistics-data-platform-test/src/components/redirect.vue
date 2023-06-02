@@ -1,16 +1,13 @@
 <script>
-import axios from 'axios';
 export default {
     mounted() {
-        axios({
-            method: "POST",
-            url: "http://localhost:5173/hldp/",
-            data: "",
-        }).then(function (response) {
-            if (response.data === "u") {
-                return { name: "login" }
-            }
-        })
+        if (this.$store.state.isLogged === 0) {
+            this.$router.push('/login');
+        } else if (this.$store.state.isLogged === 1) {
+            this.$router.push('/cust');
+        }else if (this.$store.state.isLogged === 2){
+            this.$router.push('/admin');
+        }
     }
 }
 </script>

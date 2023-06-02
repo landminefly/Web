@@ -1,0 +1,7 @@
+body {
+    /* background-color: #010409; */
+    color: #f0f6fc;
+    transition: all 0.3s;
+    user-select: none;
+    min-width: 1200px;
+}

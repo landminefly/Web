@@ -34,10 +34,10 @@ const store = createStore({
 		logout(state) {
 			state.isLogged = 0;
 		},
-		loginAsCus(state) {
+		loginAsCust(state) {
 			state.isLogged = 1;
 		},
-		logAsAdmin(state) {
+		loginAsAdmin(state) {
 			state.isLogged = 2;
 		},
 		toggleDarkMode(state){
@@ -62,8 +62,10 @@ const routes = [
 				case 0:
 					return true;
 				case 1:
-					return '/cus';
+					alert("您已经以访客身份登录，正在为您跳转");
+					return '/cust';
 				case 2:
+					alert("您已经以管理员身份登录，正在为您跳转");
 					return '/admin';
 			}
 		},
@@ -74,10 +76,12 @@ const routes = [
 		beforeEnter: (to, from) => {
 			switch (store.state.isLogged) {
 				case 0:
+					alert("您未登录，正在为您跳转");
 					return '/login';
 				case 1:
 					return true;
 				case 2:
+					alert("您已经以管理员身份登录，正在为您跳转");
 					return '/admin';
 			}
 		},
@@ -88,9 +92,11 @@ const routes = [
 		beforeEnter: (to, from) => {
 			switch (store.state.isLogged) {
 				case 0:
+					alert("您未登录，正在为您跳转");
 					return '/login';
 				case 1:
-					return '/cus';
+					alert("您已经以访客身份登录，正在为您跳转");
+					return '/cust';
 				case 2:
 					return true;
 			}
@@ -105,7 +111,7 @@ const router = createRouter({
 
 //设置全局守卫
 router.beforeEach((to, from) => {
-	if (to.path !== "/" && to.path !== "/admin" && to.path !== "/cus" && to.path !== "/login") {
+	if (to.path !== "/" && to.path !== "/admin" && to.path !== "/cust" && to.path !== "/login") {
 		alert("该页面不存在，正在为您重定向");
 		return '/';
 	}

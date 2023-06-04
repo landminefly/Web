@@ -6,6 +6,27 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "1020323",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e658",
+      "unicode_decimal": 58968
+    },
+    {
+      "icon_id": "3590935",
+      "name": "管理员",
+      "font_class": "guanliyuan",
+      "unicode": "e62a",
+      "unicode_decimal": 58922
+    },
+    {
+      "icon_id": "5199426",
+      "name": "左箭头",
+      "font_class": "zuojiantou",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
       "icon_id": "5203299",
       "name": "太阳",
       "font_class": "taiyang",
@@ -13,11 +34,32 @@
       "unicode_decimal": 58933
     },
     {
+      "icon_id": "6626333",
+      "name": "叹号",
+      "font_class": "tanhao",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
       "icon_id": "9371346",
       "name": "月亮",
       "font_class": "yueliang",
       "unicode": "e764",
       "unicode_decimal": 59236
+    },
+    {
+      "icon_id": "9759222",
+      "name": "客户",
+      "font_class": "kehu",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "33987002",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e61e",
+      "unicode_decimal": 58910
     }
   ]
 }

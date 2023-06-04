@@ -1,7 +1,3 @@
-<script>
-import '../assets/iconfont.css';
-</script>
-
 <template>
     <div id="dark-mode-btn" :class="{active:this.$store.state.isDarkMode}" @click="this.$store.commit('toggleDarkMode')">
         <span class="iconfont icon-taiyang"></span>
@@ -21,6 +17,16 @@ import '../assets/iconfont.css';
     color: #010409;
     border-radius: 25px;
     transition: all 0.3s ease;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#dark-mode-btn:hover {
+    transform: scale(1.05);
+}
+
+#dark-mode-btn:active {
+    transform: scale(1);
 }
 
 #btn-inner {

@@ -3,23 +3,4 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    <servlet>
-        <servlet-name>RedirectServlet</servlet-name>
-        <servlet-class>com.redirect.Redirect</servlet-class>
-    </servlet>
-
-    <servlet>
-        <servlet-name>CusServlet</servlet-name>
-        <servlet-class>com.redirect.Cus</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>RedirectServlet</servlet-name>
-        <url-pattern>/redirect</url-pattern>
-    </servlet-mapping>
-
-    <servlet-mapping>
-        <servlet-name>CusServlet</servlet-name>
-        <url-pattern>/cus</url-pattern>
-    </servlet-mapping>
 </web-app>

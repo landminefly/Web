@@ -1,11 +1,15 @@
 <template>
-  客户界面
+  访客界面
+  <button @click="custLogout">登出</button>
 </template>
 
 <script>
 export default {
-  mounted() {
-
+  methods:{
+    custLogout(){
+      this.$store.commit('logout');
+      this.$router.push('/login');
+    }
   }
 }
 </script>
